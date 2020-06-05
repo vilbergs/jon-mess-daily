@@ -12,5 +12,5 @@ steps:
       - "-r"
       - "-c"
       - "-d"
-      - "./vision/explore-api"
+      - "./public/"
       - "gs://test-jonmess"
