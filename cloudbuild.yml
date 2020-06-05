@@ -5,7 +5,12 @@ steps:
   - name: node
     entrypoint: npm
     args: ["run", "build"]
-artifacts:
-  objects:
-    location: "gs://test-jonmess/"
-    paths: ["public/**/*"]
+  - name: gcr.io/cloud-builders/gsutil
+    args:
+      - "-m"
+      - "rsync"
+      - "-r"
+      - "-c"
+      - "-d"
+      - "./vision/explore-api"
+      - "gs://test-jonmess"
