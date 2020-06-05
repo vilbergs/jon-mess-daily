@@ -8,7 +8,9 @@
 const axios = require("axios").default
 
 exports.createPages = async ({ actions: { createPage } }) => {
-  const poem = await (await axios("http://localhost:8080")).data
+  const poem = await (
+    await axios("https://jon-mess-poetry-nr32rwi3ua-lz.a.run.app")
+  ).data
 
   console.log(poem)
 
