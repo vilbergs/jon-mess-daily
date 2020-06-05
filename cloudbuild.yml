@@ -13,4 +13,4 @@ steps:
       - "-c"
       - "-d"
       - "./public/"
-      - "gs://test-jonmess"
+      - "gs://jonmessdaily.com"
