@@ -1,23 +1,25 @@
 import React from "react"
+import Layout from "../components/layout"
 
 const Poem = ({ pageContext: { poem } }) => (
-  <div
-    style={{
-      height: "100vh",
-      display: "flex",
-      alignContent: "center",
-      justifyContent: "center",
-      alignItems: "center",
-    }}
-  >
-    <p
+  <Layout>
+    <div
       style={{
-        whiteSpace: "pre-line",
+        height: 500,
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
       }}
     >
-      {poem}
-    </p>
-  </div>
+      <h4
+        style={{
+          whiteSpace: "pre-line",
+        }}
+      >
+        {poem}
+      </h4>
+    </div>
+  </Layout>
 )
 
 export default Poem
