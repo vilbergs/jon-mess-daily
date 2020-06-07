@@ -13,5 +13,9 @@ steps:
       - "-r"
       - "-c"
       - "-d"
-      - "./public/"
+      - "./public"
       - "gs://jonmessdaily.com"
+
+-m -h "Cache-Control:private, max-age=0, no-transform" rsync -r  -c -d ./public gs://jonmessdaily.com
+
+-m -h "Cache-Control:private, max-age=0, no-transform" rsync -r -c -d ./public/ gs://jonmessdaily.com
