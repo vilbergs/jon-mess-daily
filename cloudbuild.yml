@@ -17,5 +17,5 @@ steps:
   - name: gcr.io/cloud-builders/gsutil
     args:
       - "setmeta"
-      - '-h "cache-control:private, max-age=0'
+      - "-h cache-control:private, max-age=0"
       - "gs://jonmessdaily.com"
