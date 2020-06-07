@@ -8,9 +8,9 @@ steps:
   - name: gcr.io/cloud-builders/gsutil
     args:
       - "-m"
-      - "-h Cache-Control:private, max-age=0, no-transform"
       - "rsync"
       - "-r"
+      - "-c"
       - "-d"
       - "./public/"
       - "gs://jonmessdaily.com"
